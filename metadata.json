@@ -1,0 +1,6 @@
+{
+  "name": "MKS CNC Markt - متجر منتجات وماكينات CNC",
+  "description": "منصة احترافية لعرض وبيع منتجات وماكينات CNC متصلة مباشرة بقاعدة بيانات Supabase لعرض الصور، الأسماء، الأنواع، والتفاصيل.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
