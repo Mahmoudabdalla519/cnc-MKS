@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle, ShieldCheck, Wrench, PlusCircle, Phone } from 'lucide-react';
-import logoImg from '../assets/images/mks_cnc_markt_logo_1789326602164.jpg';
+import logoImg from '../assets/images/mkh_cnc_markt_logo_1789335118396.jpg';
 import { getWhatsAppUrl, WHATSAPP_PHONE_DISPLAY } from '../lib/constants';
 
 interface FooterProps {
@@ -18,12 +18,12 @@ export const Footer: React.FC<FooterProps> = () => {
               <div className="h-10 w-14 rounded-lg bg-neutral-900 border border-neutral-800 overflow-hidden flex items-center justify-center p-0.5">
                 <img
                   src={logoImg}
-                  alt="MKS CNC Markt"
+                  alt="MKH CNC Markt"
                   referrerPolicy="no-referrer"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain rounded"
                 />
               </div>
-              <span className="font-extrabold text-neutral-100 text-base">MKS CNC Markt</span>
+              <span className="font-extrabold text-neutral-100 text-base">MKH CNC Markt</span>
             </div>
             <p className="text-neutral-400 leading-relaxed text-xs">
               منصة متطورة لعرض وتوريد ماكينات ومنتجات الـ CNC، مصممة للمصانع، الورش، والمهندسين بأعلى معايير الدقة والاعتمادية.

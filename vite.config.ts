@@ -4,8 +4,8 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // GitHub Pages project URL: https://<username>.github.io/mks-cnc-markt/
-  base: '/mks-cnc-markt/',
+  // Use relative base path './' so GitHub Pages loads assets correctly regardless of repository name
+  base: './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

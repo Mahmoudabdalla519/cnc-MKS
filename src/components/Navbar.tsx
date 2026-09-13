@@ -1,6 +1,6 @@
 import React from 'react';
 import { Database, Search, RefreshCw, Home, MessageCircle, PlusCircle } from 'lucide-react';
-import logoImg from '../assets/images/mks_cnc_markt_logo_1789326602164.jpg';
+import logoImg from '../assets/images/mkh_cnc_markt_logo_1789335118396.jpg';
 import { getWhatsAppUrl } from '../lib/constants';
 
 interface NavbarProps {
@@ -38,18 +38,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-3 cursor-pointer group"
             title="العودة للصفحة الرئيسية"
           >
-            <div className="h-12 w-16 sm:h-14 sm:w-20 rounded-xl bg-neutral-950 border border-neutral-800 group-hover:border-amber-500/50 overflow-hidden flex items-center justify-center p-1 transition-all shadow-md">
+            <div className="h-12 w-16 sm:h-14 sm:w-20 rounded-xl bg-neutral-950 border border-neutral-800 group-hover:border-amber-500/50 overflow-hidden flex items-center justify-center p-0.5 transition-all shadow-md">
               <img
                 src={logoImg}
-                alt="MKS CNC Markt"
+                alt="MKH CNC Markt"
                 referrerPolicy="no-referrer"
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain rounded-lg"
               />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-black text-base sm:text-lg tracking-tight text-neutral-100 group-hover:text-amber-400 transition-colors">
-                  MKS <span className="text-amber-400">CNC Markt</span>
+                  MKH <span className="text-amber-400">CNC Markt</span>
                 </span>
               </div>
               <p className="text-[11px] text-neutral-400 hidden xs:block">
@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Quick WhatsApp Chat */}
             <a
-              href={getWhatsAppUrl('مرحباً، أود التحدث معكم بخصوص منتجات وماكينات MKS CNC Markt')}
+              href={getWhatsAppUrl('مرحباً، أود التحدث معكم بخصوص منتجات وماكينات MKH CNC Markt')}
               target="_blank"
               rel="noreferrer"
               title="تحدث معي عبر واتساب: 01501112446"

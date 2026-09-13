@@ -226,7 +226,7 @@ export default function App() {
       {/* Floating Chat / WhatsApp Button */}
       <a
         id="floating-whatsapp-btn"
-        href={getWhatsAppUrl('مرحباً، أود الاستفسار عن منتجات وماكينات MKS CNC Markt')}
+        href={getWhatsAppUrl('مرحباً، أود الاستفسار عن منتجات وماكينات MKH CNC Markt')}
         target="_blank"
         rel="noreferrer"
         title={`تحدث معي عبر واتساب: ${WHATSAPP_PHONE_DISPLAY}`}

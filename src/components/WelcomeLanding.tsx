@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingBag, MessageCircle, Sparkles, Shield, Cpu, ChevronLeft, PhoneCall, PlusCircle } from 'lucide-react';
-import logoImg from '../assets/images/mks_cnc_markt_logo_1789326602164.jpg';
+import logoImg from '../assets/images/mkh_cnc_markt_logo_1789335118396.jpg';
 import { getWhatsAppUrl, WHATSAPP_PHONE_DISPLAY } from '../lib/constants';
 
 interface WelcomeLandingProps {
@@ -13,7 +13,7 @@ export const WelcomeLanding: React.FC<WelcomeLandingProps> = ({
   productsCount,
 }) => {
   const handleChatWithMe = () => {
-    window.open(getWhatsAppUrl('مرحباً، أود التحدث معكم بخصوص ماكينات ومنتجات MKS CNC Markt.'), '_blank');
+    window.open(getWhatsAppUrl('مرحباً، أود التحدث معكم بخصوص ماكينات ومنتجات MKH CNC Markt.'), '_blank');
   };
 
   const handleCreateProduct = () => {
@@ -34,7 +34,7 @@ export const WelcomeLanding: React.FC<WelcomeLandingProps> = ({
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
           <span className="text-xs font-bold tracking-wider text-neutral-400 uppercase">
-            MKS CNC Markt • المتجر الرسمي
+            MKH CNC Markt • المتجر الرسمي
           </span>
         </div>
 
@@ -54,12 +54,12 @@ export const WelcomeLanding: React.FC<WelcomeLandingProps> = ({
         <div className="relative group mb-8">
           <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/30 via-orange-500/40 to-amber-500/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
           
-          <div className="relative rounded-3xl overflow-hidden border border-neutral-800/90 bg-neutral-950 p-2 sm:p-4 shadow-2xl max-w-lg mx-auto">
+          <div className="relative rounded-3xl overflow-hidden border border-neutral-800/90 bg-neutral-950 p-2 sm:p-4 shadow-2xl max-w-lg sm:max-w-xl mx-auto flex items-center justify-center">
             <img
               src={logoImg}
-              alt="MKS CNC Markt Logo"
+              alt="MKH CNC Markt Logo"
               referrerPolicy="no-referrer"
-              className="w-full h-auto max-h-[280px] sm:max-h-[340px] object-contain rounded-2xl transition-transform duration-500 hover:scale-[1.02]"
+              className="w-full h-auto max-h-[300px] object-contain rounded-2xl transition-transform duration-500 hover:scale-[1.02]"
             />
           </div>
         </div>
@@ -72,7 +72,7 @@ export const WelcomeLanding: React.FC<WelcomeLandingProps> = ({
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
-            ماكينات ومنتجات <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">MKS CNC Markt</span>
+            ماكينات ومنتجات <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">MKH CNC Markt</span>
           </h1>
 
           <p className="text-neutral-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
@@ -161,7 +161,7 @@ export const WelcomeLanding: React.FC<WelcomeLandingProps> = ({
 
       {/* Footer minimal */}
       <footer className="relative z-10 py-5 text-center text-xs text-neutral-600 border-t border-neutral-900">
-        <span>© {new Date().getFullYear()} MKS CNC Markt. جميع الحقوق محفوظة.</span>
+        <span>© {new Date().getFullYear()} MKH CNC Markt. جميع الحقوق محفوظة.</span>
       </footer>
     </div>
   );

@@ -4,12 +4,26 @@ import { CncProduct } from '../types';
 export const DEFAULT_SUPABASE_URL = 'https://hbspsdhiptcyoknumwtf.supabase.co';
 export const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_U2im-72GnfFBwsOOv9_C-w_JXVv7dym';
 
-// Create Supabase client with current credentials
+// Create Supabase client with current credentials safely without throwing
 export function getSupabaseClient(customUrl?: string, customKey?: string) {
-  const metaEnv = (import.meta as any)?.env || {};
-  const url = customUrl || metaEnv.VITE_SUPABASE_URL || DEFAULT_SUPABASE_URL;
-  const key = customKey || metaEnv.VITE_SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
-  return createClient(url, key);
+  try {
+    const metaEnv = (import.meta as any)?.env || {};
+    let url = customUrl || metaEnv.VITE_SUPABASE_URL;
+    let key = customKey || metaEnv.VITE_SUPABASE_ANON_KEY;
+
+    // Check if missing, empty, or placeholder from .env.example
+    if (!url || typeof url !== 'string' || url.includes('YOUR_PROJECT') || !url.startsWith('http')) {
+      url = DEFAULT_SUPABASE_URL;
+    }
+    if (!key || typeof key !== 'string' || key.includes('YOUR_SUPABASE') || key.length < 10) {
+      key = DEFAULT_SUPABASE_ANON_KEY;
+    }
+
+    return createClient(url, key);
+  } catch (err) {
+    console.warn('Fallback to default Supabase client due to error:', err);
+    return createClient(DEFAULT_SUPABASE_URL, DEFAULT_SUPABASE_ANON_KEY);
+  }
 }
 
 export const supabase = getSupabaseClient();
